@@ -24,22 +24,10 @@ public class ChallengeTest {
     //@Test(<expect...> = RuntimeException.class)
     // Another way to do it but I have not access to the Runtimexception
     @Test
-    public void givenString_ReturnTwoHouses (){
-        /*1.
-        * RED:   I set the desired value and get the result from the method created at first test case
-        *        So this first time the Test will fail since we are returning 1 inside calculateHouses() method
-        * GREEN  I make changes in method to return 2 when tje lenght of the string is 1. Nothing to refactor
-        * 2.
-        * RED: Enter any character is working. this should only work for ">,<,^,v"
-        * GREEN: Establish conditions for this be accomplished, refactor adding some spaces
-        * REFACTOR: Drop the unneccesary if
-        * */
-        //int expected = 2;
+    public void givenWrongString_ReturnError (){
         try {
-            //int houseCount = new Challenge("asdf").getNumberOfHouses();
+
             new Challenge("asdf").getNumberOfHouses();
-            //int houseCount = Challenge.getNumberOfHouses();
-//            Assert.assertEquals(expected, houseCount);
             // this is only ran when there's no an throwed exception
             Assert.fail();
             // As I throwed an exception that exception is handled here
@@ -58,7 +46,7 @@ public class ChallengeTest {
          */
         int expected = 8;
         int houseCount = new Challenge(">^><^>>v").getNumberOfHouses();
-        //int houseCount = new Challenge(">^");
+
         Assert.assertEquals(expected, houseCount);
     }
 }
