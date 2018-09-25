@@ -14,6 +14,10 @@ public class House {
         this.y = y;
     }
 
+    /**
+     * We override the toString method of this object in order return what we want
+     * @return couple of coordinates
+     */
     @Override
     public String toString(){
         return x + "," +  y;
